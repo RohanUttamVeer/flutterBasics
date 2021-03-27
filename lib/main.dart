@@ -12,24 +12,23 @@ class basicFlutter extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Container(
         // color: Colors.white,
-        decoration: BoxDecoration(
-            color: Colors.deepOrangeAccent,
+        decoration: BoxDecoration(           //decoration for the background
+            color: Colors.tealAccent,
             borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(2000),
                 bottomRight: Radius.circular(500))),
-        child: Center(
           child: Column(
             children: <Widget>[
               Padding(
                 padding: EdgeInsets.all(30),
               ),
-              FlatButton(
+              FlatButton(                               //flat button 
                 hoverColor: Colors.yellowAccent,
                 splashColor: Colors.green,
                 child: Text("old  flat button", style: TextStyle(fontSize: 30)),
                 onPressed: () => debugPrint('flat button pressed'),
-              ),
-              RaisedButton(
+              ), 
+              RaisedButton(                            //raised button
                   onPressed: () => debugPrint('raised button pressed'),
                   color: Colors.pink,
                   textColor: Colors.white,
@@ -40,7 +39,6 @@ class basicFlutter extends StatelessWidget {
             ],
           ),
         ),
-      ),
     );
   }
 }
