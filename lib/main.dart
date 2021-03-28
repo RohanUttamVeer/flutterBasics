@@ -62,6 +62,27 @@ class _basicFlutterState extends State<basicFlutter> {
                 });
               },
             ),
+            Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Icon(
+                    //icons and their properties added
+                    Icons.favorite,
+                    color: Colors.pink,
+                    size: 30.0,
+                    semanticLabel: 'Text to anounce acessibity modes',
+                  ),
+                  Icon(
+                    Icons.android,
+                    color: Colors.green,
+                    size: 30.0,
+                  ),
+                  Icon(
+                    Icons.headset,
+                    color: Colors.orange,
+                    size: 30.0,
+                  ),
+                ]),
           ],
         ),
       ),
