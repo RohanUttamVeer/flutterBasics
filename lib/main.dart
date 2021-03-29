@@ -33,23 +33,43 @@ class _basicFlutterState extends State<basicFlutter> {
               padding: EdgeInsets.all(20),
             ),
             FlutterLogo(
+              // colors: Colors.yellow,
               //flutter logo and its properties
               size: size,
-              colors: Colors.yellow,
               textColor: Colors.white,
               style: FlutterLogoStyle.stacked,
               duration: Duration(seconds: 2),
               curve: Curves.bounceInOut,
             ),
+
+            ElevatedButton(
+              onPressed: () {
+                debugPrint("elevated Button pressed");
+              },
+              // onPressed: null,
+              style: ElevatedButton.styleFrom(
+                primary: Colors.red,
+                onPrimary: Colors.blue,
+                onSurface: Colors.black, //works when onPressed is null
+              ),
+              child: Text('elevated button'),
+            ),
+
+            // ignore: deprecated_member_use
             FlatButton(
+              // onPressed: null,
               //flat button
-              hoverColor: Colors.yellowAccent,
-              splashColor: Colors.green,
+              focusColor: Colors.red,
+              hoverColor: Colors.pink,
+              splashColor: Colors.yellow,
               child: Text("old  flat button", style: TextStyle(fontSize: 30)),
               onPressed: () {},
             ),
+            // ignore: deprecated_member_use
             RaisedButton(
+              // onPressed: null,
               //raised button
+              disabledColor: Colors.blue, //works when onPressed is null
               color: Colors.pink,
               textColor: Colors.white,
               child: Text("Raised button", style: TextStyle(fontSize: 20)),
