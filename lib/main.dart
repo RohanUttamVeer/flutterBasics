@@ -62,7 +62,7 @@ class _basicFlutterState extends State<basicFlutter> {
               focusColor: Colors.red,
               hoverColor: Colors.pink,
               splashColor: Colors.yellow,
-              child: Text("old  flat button", style: TextStyle(fontSize: 30)),
+              child: Text("flat button", style: TextStyle(fontSize: 30)),
               onPressed: () {},
             ),
             // ignore: deprecated_member_use
@@ -103,6 +103,37 @@ class _basicFlutterState extends State<basicFlutter> {
                     size: 30.0,
                   ),
                 ]),
+            // ignore: deprecated_member_use
+            OutlineButton(
+              //outline button
+              onPressed: () {},
+              hoverColor: Colors.red.withOpacity(0.04),
+              splashColor: Colors.red.withOpacity(0.12),
+              highlightColor: Colors.red.withOpacity(0.12),
+              child: Text(
+                'Outline Button',
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+
+            OutlinedButton(
+              //outlined button
+              child: Text(
+                "Outlined Button",
+                style: TextStyle(fontSize: 20),
+              ),
+              style: ButtonStyle(overlayColor:
+                  MaterialStateProperty.resolveWith<Color>(
+                      (Set<MaterialState> states) {
+                if (states.contains(MaterialState.hovered))
+                  return Colors.blue.withOpacity(0.04);
+                if (states.contains(MaterialState.focused) ||
+                    states.contains(MaterialState.pressed))
+                  return Colors.blue.withOpacity(0.12);
+                return null;
+              })),
+              onPressed: () {},
+            )
           ],
         ),
       ),
