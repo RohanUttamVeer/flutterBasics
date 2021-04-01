@@ -132,7 +132,18 @@ class _basicFlutterState extends State<basicFlutter> {
                   return Colors.blue.withOpacity(0.12);
                 return null;
               })),
-              onPressed: () {},
+              onPressed: () {
+                //new bottom sheet
+                showBottomSheet(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return Container(
+                        height: 200.0,
+                        color: Colors.amberAccent,
+                        child: Text("w e l c o m e"),
+                      );
+                    });
+              },
             )
           ],
         ),
